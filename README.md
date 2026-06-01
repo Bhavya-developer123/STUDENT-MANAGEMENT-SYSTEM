@@ -27,59 +27,62 @@ Lombok
 Swagger OpenAPI
 Jakarta Validation
 Project Structure
-Student-Management-System/
+# Project Structure
+
+```text
+Student-Management-System
 │
 ├── uploads/
 │
-├── src/
-│   ├── main/
-│   │   ├── java/
-│   │   │   └── com/
-│   │   │       └── example/
-│   │   │           └── demo/
-│   │   │
+├── src
+│   ├── main
+│   │   ├── java
+│   │   │   └── com
+│   │   │       └── example
+│   │   │           └── demo
+│   │   │               │
 │   │   │               ├── DemoApplication.java
-│   │   │
-│   │   │               ├── controller/
+│   │   │               │
+│   │   │               ├── controller
 │   │   │               │   ├── StudentController.java
 │   │   │               │   └── FileController.java
-│   │   │
-│   │   │               ├── dto/
+│   │   │               │
+│   │   │               ├── dto
 │   │   │               │   ├── StudentRequestDto.java
 │   │   │               │   └── StudentResponseDto.java
-│   │   │
-│   │   │               ├── entity/
+│   │   │               │
+│   │   │               ├── entity
 │   │   │               │   └── Student.java
-│   │   │
-│   │   │               ├── repository/
+│   │   │               │
+│   │   │               ├── repository
 │   │   │               │   └── StudentRepository.java
-│   │   │
-│   │   │               ├── service/
+│   │   │               │
+│   │   │               ├── service
 │   │   │               │   ├── StudentService.java
 │   │   │               │   └── MailService.java
-│   │   │
-│   │   │               └── exception/
+│   │   │               │
+│   │   │               └── exception
 │   │   │                   ├── StudentNotFoundException.java
 │   │   │                   └── GlobalExceptionHandler.java
-│   │   │
-│   │   └── resources/
-│   │       └── application.properties
 │   │
-│   └── test/
-│       └── java/
-│           └── com/
-│               └── example/
-│                   └── demo/
-│                       └── DemoApplicationTests.java
+│   └── resources
+│       └── application.properties
+│
+├── src/test
+│   └── java
+│       └── com
+│           └── example
+│               └── demo
+│                   └── DemoApplicationTests.java
 │
 ├── .gitignore
 ├── .gitattributes
 ├── mvnw
 ├── mvnw.cmd
 ├── pom.xml
-├── README.md
-│
-└── target/      (generated automatically by Maven)
+└── README.md
+```
+
 Setup Instructions
 1. Clone the Repository
 git clone <repository-url>

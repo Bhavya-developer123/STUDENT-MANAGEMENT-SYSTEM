@@ -243,10 +243,4 @@ http://localhost:8081/swagger-ui/index.html
 
 ---
 
-<div align="center">
 
-### 👨‍💻 Developed by Bhavya Sri Nerella
-
-Spring Boot Developer | Open Source Contributor
-
-</div>

@@ -31,9 +31,20 @@ public class StudentService {
         s.setAge(dto.getAge());
         s.setCourse(dto.getCourse());
         s.setEmail(dto.getEmail());
-        Student saved=repo.save(s);
-        mailservice.sendEmail(dto.getEmail(),"Registration Successful","Hello " + saved.getName() +",\nWelcome to Student Management System 🎓");
-        logger.info("Student Saved Successfully id {}", saved.getId());
+        Student saved = repo.save(s);
+
+try {
+    mailservice.sendEmail(
+            dto.getEmail(),
+            "Registration Successful",
+            "Hello " + saved.getName() + ",\nWelcome to Student Management System 🎓"
+    );
+    logger.info("Registration email sent successfully.");
+} catch (Exception e) {
+    logger.error("Failed to send registration email: {}", e.getMessage());
+}
+
+logger.info("Student Saved Successfully id {}", saved.getId());
         StudentResponseDto response=new StudentResponseDto();
         response.setId(saved.getId());
         response.setName(saved.getName());
